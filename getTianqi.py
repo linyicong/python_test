@@ -2,7 +2,8 @@
 import urllib2
 import json
 from city import city
-cityname=raw_input('你想查那个城市的天气？\n')
+# cityname=raw_input('你想查那个城市的天气？\n')
+cityname = "广州"
 citycode=city.get(cityname)
 
 if citycode:
