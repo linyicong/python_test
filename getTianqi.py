@@ -11,7 +11,7 @@ cityname = "广州"
 citycode=city.get(cityname)
 
 if citycode:
-#    try:    ##做一个异常处理
+    try:    ##做一个异常处理
         url=('http://www.weather.com.cn/data/cityinfo/%s.html' % citycode) ##定义一个变量。存放要请求的连接
         content=urllib2.urlopen(url).read()     #定义一个变量，用来存储查询的内容。urllib2.urlopen(url)是用来请求/打开这个连接。read是把内容读取放到变量中
         #print content
@@ -24,7 +24,7 @@ if citycode:
         result['temp2']
         )
         print str_temp
-#    except:
+    except:
         print '查询失败'
 else:
     print '没有找到城市'
