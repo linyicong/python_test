@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 import urllib2
 import json
 from city import city
@@ -13,8 +17,9 @@ if citycode:
         #print content
         data=json.loads(content)        ##定义一个字典，使用json的函数loads方法吧内容整理成一个字典，
         result = data['weatherinfo']
-        str_temp = ('%s\n%s ~ %s') % (
-        result['weather'],  #
+        str_temp = ('%s天气：\n  \t%s\n\t%s ~ %s') % (
+		result['city'], 
+        result['weather'],  
         result['temp1'],
         result['temp2']
         )
