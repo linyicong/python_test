@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys
+import os
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
@@ -8,6 +9,8 @@ import json
 from city import city
 # cityname=raw_input('你想查那个城市的天气？\n')
 #cityname = "广州"
+cityname = os.environ['CityName']
+
 citycode=city.get(cityname)
 
 if citycode:
