@@ -11,6 +11,7 @@ from city import city
 #cityname = "广州"
 cityname = os.environ['CityName']
 
+# Default city info
 if not cityname:
     cityname = "北京"
 citycode=city.get(cityname)
